@@ -32,9 +32,9 @@ namespace SalesWebMvc.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Seller seller)
+        public IActionResult Create(Seller obj)
         {
-            _sellerService.CreateSeller(seller);
+            _sellerService.CreateSeller(obj);
             return RedirectToAction(nameof(Index));
         }
     }
